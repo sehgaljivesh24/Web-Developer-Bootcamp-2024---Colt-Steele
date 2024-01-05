@@ -1,0 +1,29 @@
+/* body {
+  margin: 0.5%;
+} */
+
+img {
+  /* Width value is in Percentages - to make it responsive */
+  /* Percentage - relative to Parent Element */
+  /* Body has whole screen width */
+  /* Each Image will take 30% of total width */
+  width: 30%;
+
+  /* 100-90 = 10% 
+   Distribute 10% eqaully among all 3 images
+  
+  */
+  /* FlexBox - will help us to distribute space eqaully among elements - RESPONSIVE */
+  margin: calc(10%/6);
+  /* margin: 1.66666%; */
+}
+
+nav {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  width: 30%;
+  margin-left: calc(10%/6);
+  padding: 1.2em 0;
+}
