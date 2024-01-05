@@ -1,0 +1,16 @@
+.circle {
+  width: 300px;
+  height: 300px;
+  background-color: magenta;
+  transition: background-color 3s 1s, border-radius 2s;
+  /* Property ko change hone mein - 3second to change, 1 sec to wait(after which change starts)  */
+}
+
+/* Transition - It takes 1 sec to transition - ek form se dusri form mein jane ka time */
+/* Helps to define transition between 2 states of an element */
+
+/* Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript. */
+.circle:hover {
+  background-color: cyan;
+  border-radius: 50%;
+}
