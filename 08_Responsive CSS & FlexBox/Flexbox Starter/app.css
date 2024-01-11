@@ -1,0 +1,73 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* 
+    display:flex;  ---> We are turning this feature "ON". Now FlexBox Property will apply to this Container 
+                        Hence will be able to distribute space dynamically between elements in Container!
+
+    FLEX-DIRECTION
+    1) Flex Model has 2 axis -> Main Axis(goes from left to Right) & Cross Axis.
+    2) Main Axis can be changes with Property: Flex-direction: row;
+    3) Values: row, row-reverse, column, column-reverse
+    4) CRUX-> FLEX-DIRECTION: Tells in which direction Content will be displayed
+
+    JUSTIFY-CONTENT
+    1) Tells how the content is distributed on MAIN-AXIS
+    2) Property -> JUSTIFY-CONTENT: ;
+    3) Values: flex-start, flex-end, center, space-between, space-around
+    4) CRUX -> JUSTIFY-CONTENT: Helps to align Elements in a Container/ distribute them along main axis.
+
+    FLEX-WRAP
+    1) Tells if the elements are gonna wrap along the main axis i.e. on next line if it is horizontal or next column if vertical
+    2) Values: wrap, wrap-reverse
+
+    ALIGN-ITEMS
+    1) Helps to align elements in CROSS-Axis (Distribute space/elements along Cross-Axis) 
+
+    ALIGN-CONTENT
+    1) Helps to Control & distribute space along CROSS-AXIS if Elements are wrapped along ROw/Column (depending upon Main Axis)
+    2) CRUX -> Controls space between rows and columns when elements are wrapped.
+    
+    ALIGN-SELF
+    1) Similar to Align-Items, But it is applied to an individual element/item in a container
+    2) CRUX-> Align/Position an element in a Container along Cross-axis
+
+    Flex-Size Properties
+    1) Flex-Basis -> Define initial size of an element when added first time in Container
+    2) Flex-Grow -> Defines amount of available space element will take up
+    3) Flex-shrink -> How elements will shrink if there is not enough space in Container
+
+*/
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 200px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    /* max-width: 300px; */
+    text-align: center;
+    flex-basis: 600px;
+}
+
+div:nth-of-type(1) {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+div:nth-of-type(5) {
+    flex-grow: 2;
+}
